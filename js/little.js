@@ -1,12 +1,12 @@
 // // image slide
 const siteList = [
-  "images/site-1.jpg",
-  "images/site-2.jpg",
-  "images/site-3.jpg",
-  "images/site-4-1.jpg",
-  "images/site-5-1.jpg",
-  "images/site-6-1.jpg",
-  "images/site-7-1.jpg",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-1.JPG?raw=true",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-2.JPG?raw=true",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-3.JPG?raw=true",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-4-1.JPG?raw=true",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-5-1.JPG?raw=true",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-6-1.JPG?raw=true",
+  "https://github.com/min-wii/clone-little/blob/main/images/site-7-1.JPG?raw=true",
 ];
 
 let currentIndex = 0;
