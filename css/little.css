@@ -68,11 +68,9 @@ header {
 }
 .header-inner .logo {
   flex: 1;
-  border: 1px solid red;
 }
 .header-inner .title {
   flex: 2;
-  border: 1px solid red;
   text-align: center;
 }
 .header-inner nav {
@@ -281,6 +279,37 @@ figure {
 }
 .clock-hand .second span {
   width: 0.1rem;
+}
+
+/* eyes */
+
+.eyehole {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.eye {
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.eye::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: #000;
+  position: absolute;
+  top: 1rem;
+  left: 5px;
+  border-radius: 50%;
+  z-index: 100;
+  transform: rotate(30deg);
 }
 
 /* finger */

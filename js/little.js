@@ -39,9 +39,6 @@ function getCurrentTime() {
   const currentHour = date.getHours();
   const currentMinute = date.getMinutes();
   const currentSecond = date.getSeconds();
-  // console.log(currentHour);
-  // console.log(currentMinute);
-  // console.log(currentSecond);
 
   const handHour = document.querySelector(".clock-hand .hour span");
   const handMinute = document.querySelector(".clock-hand .minute span");
@@ -66,10 +63,10 @@ document.addEventListener("mousemove", (event) => {
 
   pointLight.style.left = x - rectWidth / 2 + "px";
   pointLight.style.top = y - rectHeight / 2 + "px";
-  console.log("x", x);
-  console.log(rectWidth);
+  // console.log("x", x);
+  // console.log(rectWidth);
 });
-console.log("크기", window.innerWidth);
+// console.log("크기", window.innerWidth);
 
 function highlightPointLight(isHovered) {
   const clockInner = document.querySelector(".clock-inner");
@@ -78,3 +75,19 @@ function highlightPointLight(isHovered) {
   pointLight.style.background = isHovered ? "#fff" : "none";
   pointLight.style.boxShadow = isHovered ? "0 0 1rem #fff" : "none";
 }
+
+// eyes
+const eyeHole = document.querySelector(".eyehole");
+document.addEventListener("mousemove", (event) => {
+  const eyes = document.querySelectorAll(".eye");
+  eyes.forEach(function (eye) {
+    const x = eye.getBoundingClientRect().left + eye.offsetWidth / 2;
+    const y = eye.getBoundingClientRect().top + eye.offsetHeight / 2;
+    const radian = Math.atan2(event.pageY - y, event.pageX - x);
+    const radToDeg = radian * (180 / Math.PI) + 120;
+    eye.style.transform = `rotate(${radToDeg}deg)`;
+    console.log("x", x);
+    console.log("y", y);
+    console.log("radian", radian);
+  });
+});
