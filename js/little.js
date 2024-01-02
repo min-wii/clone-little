@@ -91,3 +91,12 @@ document.addEventListener("mousemove", (event) => {
     console.log("radian", radian);
   });
 });
+
+// chat-ohone
+
+const paragraphs = document.querySelectorAll(".answer p");
+
+paragraphs.forEach((paragraph, index) => {
+  paragraph.style.animation = "floating 0.5s linear forwards";
+  paragraph.style.animationDelay = `${index * 1}s`;
+});

@@ -312,6 +312,77 @@ figure {
   transform: rotate(30deg);
 }
 
+/* chat-phone */
+.chat-phone {
+  position: relative;
+}
+.phone-frame {
+  position: absolute;
+  width: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.phone-screen {
+  position: absolute;
+  bottom: 0;
+  width: 88%;
+  height: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2.4vw 2.4vw 0 0;
+  background-color: var(--primary-color);
+}
+.phone-screen-inner {
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+.answer p {
+  display: inline-block;
+  width: fit-content;
+  border-radius: 0.5vw;
+  line-height: 1.4;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.5vw;
+  opacity: 0;
+  animation: floating 0.5s linear forwards;
+}
+.answer-bot p {
+  background-color: var(--main-color);
+}
+
+.answer-user {
+  align-items: flex-end;
+  text-align: end;
+}
+.answer-user p {
+  border: 1px dashed #000;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.answer-user p:hover {
+  color: var(--main-color);
+  background-color: #000;
+}
+
+@keyframes floating {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* finger */
 .finger {
   position: relative;
