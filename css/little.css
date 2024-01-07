@@ -326,7 +326,7 @@ figure {
 .phone-screen {
   position: absolute;
   bottom: 0;
-  width: 88%;
+  width: 90%;
   height: 95%;
   left: 50%;
   transform: translateX(-50%);
@@ -334,10 +334,13 @@ figure {
   background-color: var(--primary-color);
 }
 .phone-screen-inner {
+  height: 100%;
   padding: 1vw;
   display: flex;
   flex-direction: column;
   gap: 1.2vw;
+  /* overflow-y: scroll;
+  scrollbar-width: thin; */
 }
 
 .answer {
@@ -353,7 +356,6 @@ figure {
   padding: 0.2rem 0.5rem;
   font-size: 1.5vw;
   opacity: 0;
-  animation: floating 0.5s linear forwards;
 }
 .answer-bot p {
   background-color: var(--main-color);
@@ -381,6 +383,18 @@ figure {
   to {
     opacity: 1;
   }
+}
+
+.answer .reanswer {
+  display: inline-block;
+  width: fit-content;
+  border-radius: 0.5vw;
+  line-height: 1.4;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.5vw;
+  opacity: 1;
+  color: #000;
+  background-color: var(--main-color);
 }
 
 /* finger */
